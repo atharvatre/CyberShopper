@@ -3,9 +3,9 @@ import Layout from '../../components/Layout/Layout'
 import UserMenu from '../../components/Layout/UserMenu'
 import { useAuth } from '../../context/Auth'
 const Dashboard = () => {
-  const [auth]=useAuth()
+  const [auth] = useAuth()
   return (
-    <Layout title={"Ecomm - Dashboard"}>
+    <Layout title={"CyberShopper - Dashboard"}>
       <div className="container-fluid m-3 p-3">
         <div className="row">
           <div className="col-md-3">
