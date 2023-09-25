@@ -19,7 +19,7 @@ const Register = () => {
     try {
       const res = await axios.post(`${process.env.REACT_APP_API}/api/v1/auth/register`,
         {
-          name, email, password, phone, address,answer
+          name, email, password, phone, address, answer
         })
       if (res && res.data.success) {
         toast.success(res.data && res.data.message,)
@@ -39,7 +39,7 @@ const Register = () => {
   }
 
   return (
-    <Layout title={"Ecomm - register"}>
+    <Layout title={"CyberShopper - register"}>
       <div className="form-container">
         <form onSubmit={handleSubmit}>
           <h4 className="title">REGISTER FORM</h4>
@@ -104,18 +104,18 @@ const Register = () => {
             />
 
           </div>
-            <div className="mb-3">
-              <input
-                type="text"
-                value={answer}
-                onChange={(e) => setAnswer(e.target.value)}
-                placeholder='What is your favorite fruit?'
-                className="form-control"
-                id="exampleInputEmail1"
-                required
-              />
+          <div className="mb-3">
+            <input
+              type="text"
+              value={answer}
+              onChange={(e) => setAnswer(e.target.value)}
+              placeholder='What is your favorite fruit?'
+              className="form-control"
+              id="exampleInputEmail1"
+              required
+            />
 
-            </div>
+          </div>
 
 
           <button type="submit" className="btn btn-primary">REGISTER</button>

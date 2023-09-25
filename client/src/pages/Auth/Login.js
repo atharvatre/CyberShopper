@@ -51,11 +51,11 @@ const Login = () => {
   }
 
   return (
-    <Layout title={"Ecomm - Login"}>
+    <Layout title={"CyberShopper - Login"}>
       <div className="form-container">
         <form onSubmit={handleSubmit}>
           <h4 className="title">LOGIN FORM</h4>
-          
+
           <div className="mb-3">
             <input
               type="email"
@@ -79,7 +79,7 @@ const Login = () => {
               required
             />
           </div>
-          
+
           <div className="mb-3">
             <button type="button" className="btn btn-primary" onClick={() => {
               navigate('/forgot-password')

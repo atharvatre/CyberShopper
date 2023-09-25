@@ -117,7 +117,7 @@ const HomePage = () => {
 
 
   return (
-    <Layout title={"Ecomm - All products"}>
+    <Layout title={"CyberShopper - All products"}>
       <div className="row mt-3">
         <div className="col-md-2">
           <h4 className='text-center'>Filter by Category</h4>

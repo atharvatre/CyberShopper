@@ -42,7 +42,7 @@ const ForgotPassword = () => {
         }
     }
     return (
-        <Layout title={"Ecomm - Reset Password"}>
+        <Layout title={"Reset Password"}>
             <div className="form-container">
                 <form onSubmit={handleSubmit}>
                     <h4 className="title">RESET PASSWORD</h4>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
-import { FaShoppingCart } from 'react-icons/fa'
+import { FaShoppingCart, FaLaptopCode } from 'react-icons/fa'
 import { useAuth } from '../../context/Auth'
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom'
@@ -31,7 +31,7 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to='/' className="navbar-brand" >
-              <FaShoppingCart /> Ecomm app
+              <FaLaptopCode /> CyberShopper
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
@@ -57,8 +57,7 @@ const Header = () => {
                         {auth?.user?.name}
                       </NavLink>
                       <ul className="dropdown-menu">
-                        <li><NavLink to={`/dashboard/${
-                            auth?.user?.role === 1 ? "admin" : "user"
+                        <li><NavLink to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"
                           }`} className="dropdown-item" >Dashboard</NavLink></li>
                         <li>
                           <NavLink onClick={handleLogout} to='/login' className="dropdown-item" >Logout</NavLink>

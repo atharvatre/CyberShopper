@@ -26,7 +26,7 @@ const Products = () => {
     }, [])
 
     return (
-        <Layout>
+        <Layout title={"Dashboard - All Products"}>
             <div className="row">
                 <div className="col-md-3">
                     <AdminMenu />
