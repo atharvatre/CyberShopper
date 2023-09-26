@@ -40,7 +40,7 @@ export const createProductController = async (req, res) => {
         })
     } catch (error) {
         console.log(error)
-        resizeBy.status(500).send({
+        res.status(500).send({
             success: false,
             error,
             message: 'error in creating product'
@@ -240,6 +240,27 @@ export const productListController = async (req, res) => {
             success: false,
             messaage: 'error in per page controller',
             error,
+        })
+    }
+}
+
+//search product
+export const searchProductController = async (req, res) => {
+    try {
+        const { keyword } = req.params
+        const results = await productModel.find({
+            $or: [
+                { name: { $regex: keyword, $options: "i" } },
+                { description: { $regex: keyword, $options: "i" } }
+            ]
+        }).select('-photo')
+        res.json(results)
+    } catch (error) {
+        console.log(error)
+        res.status(400).send({
+            success: false,
+            messaage: 'Error in search product API',
+            error
         })
     }
 }

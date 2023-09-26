@@ -56,10 +56,13 @@ const CreateProduct = () => {
             const { data } = axios.post(`${process.env.REACT_APP_API}/api/v1/product/create-product`, productData)
             if (data?.success) {
                 toast.error(data?.message)
+
             }
             else {
                 toast.success("Product created Successfully")
-                navigate('/dashboard/admin/products')
+                setTimeout(() => {
+                    navigate('/dashboard/admin/products')
+                }, 1000)
             }
         } catch (error) {
             console.log(error)

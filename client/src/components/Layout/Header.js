@@ -1,9 +1,11 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
-import { FaShoppingCart, FaLaptopCode } from 'react-icons/fa'
+import { FaLaptopCode } from 'react-icons/fa'
 import { useAuth } from '../../context/Auth'
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom'
+//import Search from 'antd/es/input/Search';
+import SearchInput from '../Form/SearchInput';
 
 
 const Header = () => {
@@ -34,6 +36,7 @@ const Header = () => {
               <FaLaptopCode /> CyberShopper
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <SearchInput />
               <li className="nav-item">
                 <NavLink to='/' className="nav-link "  >Home</NavLink>
               </li>
