@@ -7,11 +7,13 @@ import { useNavigate } from 'react-router-dom'
 //import Search from 'antd/es/input/Search';
 import SearchInput from '../Form/SearchInput';
 import useCategory from '../../hooks/useCategory';
-
+import { useCart } from '../../context/cart';
+import { Badge } from 'antd';
 
 const Header = () => {
 
   const [auth, setAuth] = useAuth()
+  const [cart] = useCart()
   const categories = useCategory()
   const navigate = useNavigate()
 
@@ -95,7 +97,9 @@ const Header = () => {
                   </>)
               }
               <li className="nav-item">
-                <NavLink to='/cart' className="nav-link" >Cart (0)</NavLink>
+                <Badge count={cart?.length} showZero>
+                  <NavLink to='/cart' className="nav-link" >Cart </NavLink>
+                </Badge>
               </li>
 
             </ul>
